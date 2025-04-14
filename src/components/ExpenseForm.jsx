@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ExpenseForm({ addExpense }) {  
+function ExpenseForm({ onAddExpense }) {  
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
   const [date, setDate] = useState('');
@@ -18,7 +18,7 @@ function ExpenseForm({ addExpense }) {
       category,
     };
 
-    addExpense(newExpense); 
+    onAddExpense(newExpense); 
     setDescription('');
     setAmount('');
     setDate('');
